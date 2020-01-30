@@ -23,7 +23,7 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.vue'],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
