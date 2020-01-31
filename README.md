@@ -4,7 +4,7 @@
 
 ## Component Driven Development
 
-Storybook: [adventurio.now.sh](adventurio.now.sh)
+Storybook: [https://adventurio.now.sh](adventurio.now.sh)
 
 ## Build Setup
 
