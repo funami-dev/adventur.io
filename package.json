@@ -1,5 +1,5 @@
 {
-  "name": "adventur.io",
+  "name": "adventurio",
   "version": "1.0.0",
   "description": "Starter project for nuxtjs and nestjs integrated.",
   "author": "Daniel Weber",
@@ -9,7 +9,8 @@
     "start": "cross-env NODE_ENV=production node dist/server/main.js",
     "start:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
     "storybook": "start-storybook",
-    "build": "cross-env NODE_ENV=production npm run clean && nuxt-ts build && tsc",
+    "deploy:storybook:now": "build-storybook -c .storybook -o public && now --prod ./public",
+    "build:prod": "cross-env NODE_ENV=production npm run clean && nuxt-ts build && tsc",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "lintfix": "tslint -p tsconfig.json --fix",
     "clean": "rimraf dist"
@@ -27,7 +28,8 @@
     "rimraf": "^2.6.3",
     "rxjs": "^6.3.3",
     "ts-loader": "^5.3.3",
-    "vue-meta": "^2.3.1",
+    "vue": "^2.6.11",
+    "vue-meta": "^1.5.8",
     "vue-styled-components": "^1.4.14",
     "vuetify": "^1.5.6",
     "vuetify-loader": "^1.2.1",

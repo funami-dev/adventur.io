@@ -2,13 +2,14 @@ import NuxtConfiguration from '@nuxt/config';
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
 import nodeExternals from 'webpack-node-externals';
 const isDev = !(process.env.NODE_ENV === 'production');
+console.log(NuxtConfiguration);
 
-const config: NuxtConfiguration = {
+const config: any = {
   mode: 'universal',
 
   env: {
     host: 'localhost',
-    port: '3100',
+    port: '3101',
     baseUrl: process.env.BASE_URL || 'http://localhost:3100',
   },
 
@@ -83,15 +84,15 @@ const config: NuxtConfiguration = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      if (process.server) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^vuetify/],
-          }),
-        ];
-      }
-    },
+    // extend(config, ctx) {
+    //   if (process.server) {
+    //     config.externals = [
+    //       nodeExternals({
+    //         whitelist: [/^vuetify/],
+    //       }),
+    //     ];
+    //   }
+    // },
   },
 };
 
