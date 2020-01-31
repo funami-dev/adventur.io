@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2015",
     "declaration": false,
     "removeComments": true,
-    "noLib": false,
+    "noLib": false,   
+    "target": "es5",
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowJs": true,
-    "target": "es6",
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "./dist",
